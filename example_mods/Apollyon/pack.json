@@ -1,0 +1,7 @@
+{
+	"name": "Apollyon mod V6",
+	"description": "Adds a new Apollyon Week with New Sprites and songs",
+	"restart":false,
+	"runsGlobally": false,
+	"color": [170, 0, 255]
+}

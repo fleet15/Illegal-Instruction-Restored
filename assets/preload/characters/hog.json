@@ -1,0 +1,125 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-57,
+				-464
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "HogDown"
+		},
+		{
+			"offsets": [
+				-7,
+				-420
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "HogLeft"
+		},
+		{
+			"offsets": [
+				-87,
+				-319
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "HogUp"
+		},
+		{
+			"offsets": [
+				-99,
+				-420
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "HogRight"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-130,
+				-410
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "HogIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-130
+			],
+			"anim": "charge",
+			"fps": 24,
+			"name": "GetReady",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-120
+			],
+			"anim": "jump",
+			"fps": 24,
+			"name": "Jump",
+			"indices": []
+		},
+		{
+			"offsets": [
+				140,
+				-169
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "zoom",
+			"loop": false,
+			"name": "Zoom"
+		},
+		{
+			"offsets": [
+				30,
+				-130
+			],
+			"indices": [
+				18,
+				19
+			],
+			"fps": 24,
+			"anim": "chargestat",
+			"loop": true,
+			"name": "GetReady"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Hog",
+	"position": [
+		0,
+		-60
+	],
+	"healthicon": "hog",
+	"flip_x": false,
+	"healthbar_colors": [
+		29,
+		24,
+		206
+	],
+	"camera_position": [
+		-220,
+		220
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

@@ -1,0 +1,6 @@
+
+
+Lyrics!!!
+Value 1: Tex
+Value 2: Color (in hex)
+To clear it, add another event, and leave the values blank

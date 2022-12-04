@@ -1,0 +1,74 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "curse",
+		"player1": "bf",
+		"player2": "curse_nervous",
+		"player3": null,
+		"events": [
+			[
+				66000,
+				[
+					[
+						"Play Animation",
+						"uhoh",
+						"dad"
+					]
+				]
+			],
+			[
+				88453.125,
+				[
+					[
+						"Change Character",
+						"dad",
+						"curse_pissbaby"
+					],
+					[
+						"Play Animation",
+						"admit",
+						"dad"
+					]
+				]
+			],
+			[
+				122000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"curse_happy"
+					]
+				]
+			],
+			[
+				148000,
+				[
+					[
+						"Play Animation",
+						"ok",
+						"dad"
+					]
+				]
+			],
+			[
+				155333.333333333,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"bf"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 120,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Malediction"
+	}
+}

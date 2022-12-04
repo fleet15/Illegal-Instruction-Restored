@@ -1,0 +1,4 @@
+Value 1 = if the static is Pixel(true, false(or leave blank for false)).
+if you want to destroy, write "destroy" in value 1.
+
+Value 2 = if the static will loop(true, false( or leave blank for false).

@@ -1,0 +1,7 @@
+{
+	"name": "Hedge Full Song",
+	"description": "Hoggers",
+	"restart":false,
+	"runsGlobally": false,
+	"color": [25, 0, 100]
+}
