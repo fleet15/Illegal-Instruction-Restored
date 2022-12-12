@@ -1,0 +1,4 @@
+Value 1 = true or false
+
+if true, the GreenVG will appear
+if false, will be destroy.

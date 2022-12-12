@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				42,
 				6
 			],
+			"indices": [],
+			"fps": 10,
 			"anim": "idle",
-			"fps": 21,
-			"name": "glitchhog idle",
-			"indices": []
+			"loop": true,
+			"name": "glitchhog idle"
 		}
 	],
 	"no_antialiasing": false,

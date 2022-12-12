@@ -1,0 +1,34 @@
+{
+	"storyName": "So many souls..",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Chaotix",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"apollyon",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"perdition",
+			"duke",
+			[
+				206,
+				20,
+				13
+			]
+		],
+		[
+			"corinthians",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Apollyon"
+}

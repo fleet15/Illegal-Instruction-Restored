@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="prower.png">
+<SubTexture name="prower fly0000" x="0" y="0" width="438" height="398" frameX="-23" frameY="-36" frameWidth="471" frameHeight="467" />
+<SubTexture name="prower fly0001" x="438" y="0" width="438" height="398" frameX="-23" frameY="-36" frameWidth="471" frameHeight="467" />
+</TextureAtlas>

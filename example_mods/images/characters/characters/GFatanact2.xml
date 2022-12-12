@@ -1,0 +1,16 @@
+﻿<?xml version="Kophy232" encoding="utf-8"?>
+<TextureAtlas imagePath="GFatanact2.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Anim0000" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0001" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0002" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0003" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0004" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0005" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0006" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0007" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0008" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0009" x="0" y="0" width="1739" height="768"/>
+	<SubTexture name="Anim0010" x="0" y="0" width="1739" height="768"/>
+</TextureAtlas>

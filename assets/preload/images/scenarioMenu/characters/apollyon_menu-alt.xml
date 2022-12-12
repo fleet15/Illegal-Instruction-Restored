@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="apollyon_menu.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Apollyon menu0000" x="0" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0001" x="0" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0002" x="57" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0003" x="57" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0004" x="114" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0005" x="114" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0006" x="171" y="0" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0007" x="0" y="46" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0008" x="0" y="46" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0009" x="57" y="46" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0010" x="57" y="46" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0011" x="114" y="46" width="57" height="46"/>
+	<SubTexture name="Apollyon menu0012" x="114" y="46" width="57" height="46"/>
+</TextureAtlas>

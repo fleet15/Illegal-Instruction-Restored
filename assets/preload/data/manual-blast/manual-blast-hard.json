@@ -20218,64 +20218,14 @@
 				"bpm": 130
 			},
 			{
+				"gfSection": false,
 				"lengthInSteps": 16,
+				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
 				"bpm": 130,
 				"changeBPM": false,
 				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 130,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 130,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 130,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 130
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 130
 			},
 			{
 				"gfSection": false,
@@ -20357,6 +20307,16 @@
 						"Play Animation",
 						"zoom",
 						"dad"
+					]
+				]
+			],
+			[
+				25153.8461538462,
+				[
+					[
+						"DodgeEvent",
+						"0.95",
+						""
 					]
 				]
 			],
@@ -20451,6 +20411,16 @@
 				]
 			],
 			[
+				35307.6923076923,
+				[
+					[
+						"DodgeEvent",
+						"0.95",
+						""
+					]
+				]
+			],
+			[
 				35423.0769230769,
 				[
 					[
@@ -20491,42 +20461,12 @@
 				]
 			],
 			[
-				60319.7241240435,
+				60333.4675795409,
 				[
 					[
 						"Change Character",
 						"dad",
 						"hoganimation"
-					]
-				]
-			],
-			[
-				60327.5775271848,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				61118.807893677,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				64095.2476842529,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20541,52 +20481,12 @@
 				]
 			],
 			[
-				64260.1691502215,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				64574.3052758759,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				69127.3157470801,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				69129.2790978655,
 				[
 					[
 						"Add Camera Zoom",
 						"0.005",
 						"0"
-					]
-				]
-			],
-			[
-				69592.6298832058,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20601,32 +20501,12 @@
 				]
 			],
 			[
-				71638.4414015304,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				71642.3681031011,
 				[
 					[
 						"Add Camera Zoom",
 						"0.005",
 						"0"
-					]
-				]
-			],
-			[
-				72107.6822392267,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20641,32 +20521,12 @@
 				]
 			],
 			[
-				74151.530406766,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				74155.4571083367,
 				[
 					[
 						"Add Camera Zoom",
 						"0.010",
 						"0"
-					]
-				]
-			],
-			[
-				74622.7345952477,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20681,32 +20541,12 @@
 				]
 			],
 			[
-				76666.582762787,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				76668.5461135723,
 				[
 					[
 						"Add Camera Zoom",
 						"0.010",
 						"0"
-					]
-				]
-			],
-			[
-				77133.860249698,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20721,32 +20561,12 @@
 				]
 			],
 			[
-				79171.8183648812,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				79181.6351188079,
 				[
 					[
 						"Add Camera Zoom",
 						"0.010",
 						"0"
-					]
-				]
-			],
-			[
-				79644.9859041482,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20761,32 +20581,12 @@
 				]
 			],
 			[
-				81684.9073701168,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				81694.7241240435,
 				[
 					[
 						"Add Camera Zoom",
 						"0.010",
 						"0"
-					]
-				]
-			],
-			[
-				82156.1115585985,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20801,32 +20601,12 @@
 				]
 			],
 			[
-				84201.9230769231,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				84207.8131292791,
 				[
 					[
 						"Add Camera Zoom",
 						"0.010",
 						"0"
-					]
-				]
-			],
-			[
-				84675.0906161901,
-				[
-					[
-						"trioStatic",
-						"",
-						""
 					]
 				]
 			],
@@ -20841,32 +20621,17 @@
 				]
 			],
 			[
-				85454.5408779702,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				85464.3576318969,
 				[
 					[
 						"Change Character",
 						"dad",
 						"scorched"
-					]
-				]
-			],
-			[
-				86004.2790978655,
-				[
+					],
 					[
-						"trioStatic",
-						"",
-						""
+						"Change Character",
+						"bf",
+						"bfLooking"
 					]
 				]
 			],
@@ -20881,16 +20646,6 @@
 				]
 			],
 			[
-				86398.9126057189,
-				[
-					[
-						"trioStatic",
-						"",
-						""
-					]
-				]
-			],
-			[
 				86406.7660088603,
 				[
 					[
@@ -20901,32 +20656,12 @@
 				]
 			],
 			[
-				86628.6246476037,
+				86720.9021345147,
 				[
 					[
-						"Change Character",
-						"bf",
-						"bfLooking"
-					]
-				]
-			],
-			[
-				86642.3681031011,
-				[
-					[
-						"static",
-						"",
-						"false"
-					]
-				]
-			],
-			[
-				343048.127265403,
-				[
-					[
-						"Change Character",
-						"bf",
-						"bfglitch"
+						"Red Flash Camera",
+						"1",
+						""
 					]
 				]
 			],
@@ -20942,6 +20677,11 @@
 						"Change Character",
 						"gf",
 						"glitchhogbg"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bfglitch"
 					]
 				]
 			],
@@ -22042,6 +21782,21 @@
 						"glitch",
 						"",
 						""
+					]
+				]
+			],
+			[
+				385778.49375755,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bf-bugged"
+					],
+					[
+						"Change Character",
+						"gf",
+						"gf"
 					]
 				]
 			],
