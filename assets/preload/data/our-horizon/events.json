@@ -1,0 +1,64 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "horizon",
+		"player1": "chaotix_bf",
+		"player2": "chaotix_faker",
+		"player3": null,
+		"events": [
+			[
+				95700.0386056989,
+				[
+					[
+						"Change Character",
+						"dad",
+						"chaotix"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-holding-gf"
+					]
+				]
+			],
+			[
+				224161.577067237,
+				[
+					[
+						"Change Character",
+						"bf",
+						"chaotix_bf"
+					],
+					[
+						"Change Character",
+						"dad",
+						"beast_chaotix"
+					]
+				]
+			],
+			[
+				273392.346298006,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bf-holding-gf"
+					],
+					[
+						"Change Character",
+						"dad",
+						"chaotix"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "chaotix_gf",
+		"bpm": 156,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "our-horizon"
+	}
+}

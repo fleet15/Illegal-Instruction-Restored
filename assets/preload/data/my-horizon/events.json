@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 2.6,
+		"stage": "horizon",
+		"player1": "chaotix_bf",
+		"player2": "chaotix_faker",
+		"player3": null,
+		"events": [
+			[
+				141833.55911858,
+				[
+					[
+						"Change Character",
+						"dad",
+						"beast_chaotix"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "chaotix_gf",
+		"bpm": 109,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "My-Horizon"
+	}
+}

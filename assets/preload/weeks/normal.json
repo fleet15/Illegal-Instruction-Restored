@@ -1,0 +1,24 @@
+{
+	"songs": [
+		[
+			"Found You",
+			"normal",
+			[ 146, 113, 253 ]
+		]
+	],
+
+	"weekCharacters": [
+		"normal",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "stage",
+
+	"storyName": "Normal CD",
+	"weekBefore": "chaotix",
+	"weekName": "Normal CD",
+	"startUnlocked": false,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}
