@@ -1,0 +1,41 @@
+{
+	"songs": [
+		[
+			"perdition",
+			"apollyon",
+			[
+				0,
+				0,
+				113
+			]
+		],
+		[
+			"corinthians",
+			"apollyon",
+			[
+				6,
+				0,
+				35
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"hog",
+		"bf",
+		"gf"
+	],
+	"storyName": "apollyon",
+	"weekName": "apollyon",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": false
+}

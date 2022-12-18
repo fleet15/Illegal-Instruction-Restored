@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="glitchhog.png"><SubTexture name="glitchhog idle0000" x="0" y="0" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+<SubTexture name="glitchhog idle0001" x="2368" y="0" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+<SubTexture name="glitchhog idle0002" x="0" y="1005" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+<SubTexture name="glitchhog idle0003" x="2368" y="1005" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+<SubTexture name="glitchhog idle0004" x="0" y="2010" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+</TextureAtlas>

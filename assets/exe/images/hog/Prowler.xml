@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Prowler.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Prowler idle0000" x="0" y="0" width="336" height="301" frameX="0" frameY="0" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0001" x="336" y="0" width="336" height="301" frameX="0" frameY="0" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0002" x="672" y="0" width="333" height="294" frameX="0" frameY="-6" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0003" x="1005" y="0" width="333" height="294" frameX="0" frameY="-6" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0004" x="1338" y="0" width="330" height="293" frameX="0" frameY="-8" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0005" x="1668" y="0" width="330" height="293" frameX="0" frameY="-8" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0006" x="0" y="301" width="326" height="294" frameX="0" frameY="-8" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0007" x="326" y="301" width="326" height="294" frameX="0" frameY="-8" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0008" x="652" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0009" x="979" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0010" x="1306" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0011" x="1633" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0012" x="652" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+	<SubTexture name="Prowler idle0013" x="979" y="301" width="327" height="299" frameX="0" frameY="-3" frameWidth="336" frameHeight="302"/>
+</TextureAtlas>

@@ -70,6 +70,9 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		if(FlxG.save.data.epilepsy == null)
+			FlxG.save.data.epilepsy = true;
+
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 3)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('chaotixMenu/menu-bg'));
 		bg.scrollFactor.set(0, 0);
@@ -278,9 +281,9 @@ class MainMenuState extends MusicBeatState
 											case 'story_mode':
 												MusicBeatState.switchState(new StoryMenuState());
 											case 'freeplay':
-												MusicBeatState.switchState(new FreeplayState());
+												MusicBeatState.switchState(new BallsFreeplay());
 											case 'collection':
-												MusicBeatState.switchState(new FreeplayState());
+												MusicBeatState.switchState(new CollectionRoomState());
 											case 'credits':
 												MusicBeatState.switchState(new CreditsState());
 											case 'options':
