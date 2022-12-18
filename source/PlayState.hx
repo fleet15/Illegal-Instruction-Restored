@@ -476,6 +476,8 @@ class PlayState extends MusicBeatState
 
 	var scoreRandom:Bool = false;
 
+	//dodging Shit
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -1270,7 +1272,7 @@ class PlayState extends MusicBeatState
 						scorchedRocks.scale.x = 1.25;
 						scorchedRocks.scale.y = 1.25;
 
-						glitchBruh = new FlxSprite(-500, -200);
+						glitchBruh = new FlxSprite(-500, -150);
 						glitchBruh.frames = Paths.getSparrowAtlas('hog/blast/glitchhog', 'exe');
 						glitchBruh.animation.addByPrefix('glitch', 'glitchhog idle', 12);
 						glitchBruh.animation.play('glitch');
@@ -3308,7 +3310,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'frontier')
 		{
 			itemFly.y += Math.sin(emeraldTween) * 0.5;
-			itemFly2.y += Math.sin(masterEmeraldTween) * 1.5;
+			itemFly2.y += Math.sin(masterEmeraldTween) * 0.5;
 		}
 
 		if(dad.curCharacter == 'dukep3' && curStage == 'frontier') {
@@ -5894,55 +5896,39 @@ class PlayState extends MusicBeatState
 								}
 							case 4160:
 								if(!ClientPrefs.epilepsy)
-									scyorchedStuff();
+									scyorchedStuff(1);
 							case 4672:
 								if(ClientPrefs.flashing){
 									camGame.setFilters([camGlitchFilter, camFuckFilter, staticOverlay]);
 									camHUD.setFilters([camGlitchFilter, camFuckFilter]);
 								}
+								if(!ClientPrefs.epilepsy)
+									scyorchedStuff(2);
 								
-								/*FlxFlicker.flicker(scorchedMotain, 1.5, 0.04, false, false, function(flick:FlxFlicker)
-									{
-										remove(scorchedMotain);
-										scorchedMotain.destroy();
-									});*/
-									camFuckShader.amount = 0.01;
-									if(ClientPrefs.epilepsy)
-										glitchKill(scorchedMotain);
+								camFuckShader.amount = 0.01;
+								glitchKill(scorchedMotain);
 							case 4704:
-								/*FlxFlicker.flicker(scorchedWaterFalls, 1.5, 0.04, false, false, function(flick:FlxFlicker)
-									{
-										remove(scorchedWaterFalls);
-										scorchedWaterFalls.destroy();
-									});*/
-									camFuckShader.amount = 0.035;
-									if(ClientPrefs.epilepsy)
-										glitchKill(scorchedWaterFalls);
+								camFuckShader.amount = 0.035;
+								glitchKill(scorchedWaterFalls);
 							case 4736:
 								camFuckShader.amount = 0.075;
-								if(ClientPrefs.epilepsy){
-									glitchKill(scorchedHills);
-									glitchKill(scorchedMonitor);
-								}
+								glitchKill(scorchedHills);
+								glitchKill(scorchedMonitor);
 							case 4920:
-								if(ClientPrefs.epilepsy)
-									glitchKill(scorchedBg);
+								glitchKill(scorchedBg);
 							case 4944:
-									glitchKill(boyfriend, true);
+								glitchKill(boyfriend, true);
 								piss.push(FlxTween.tween(camFuckShader, {amount: 0.3}, 4, {
 									ease: FlxEase.cubeInOut
 								}));
 							case 4960:
-								if(ClientPrefs.epilepsy)
-									glitchKill(scorchedTrees);
+								glitchKill(scorchedTrees);
 							case 4978:
-								if(ClientPrefs.epilepsy)
-									glitchKill(scorchedRocks);
+								glitchKill(scorchedRocks);
 							case 4992:
-								if(ClientPrefs.epilepsy)
-									glitchKill(scorchedFloor);
+								glitchKill(scorchedFloor);
 							case 5000:
-									glitchKill(dad, true);
+								glitchKill(dad, true);
 								FlxTween.tween(camGame, {alpha: 0});
 								FlxTween.tween(camHUD, {alpha: 0});
 						}
@@ -6203,18 +6189,33 @@ class PlayState extends MusicBeatState
 			scorchedRocks.visible = true;
 		}
 
-		function scyorchedStuff() 
+		function scyorchedStuff(bruh:Int) 
 		{
-			scorchedBg.visible = false;
-			scorchedMotain.visible = false;
-			scorchedWaterFalls.visible = false;
-			scorchedHills.visible = false;
-			scorchedMonitor.visible = false;
-			scorchedTrees.visible = false;
-			scorchedFloor.visible = false;
-			scorchedRocks.visible = false;
+			switch(bruh)
+			{
+				case 1:
+					scorchedBg.visible = false;
+					scorchedMotain.visible = false;
+					scorchedWaterFalls.visible = false;
+					scorchedHills.visible = false;
+					scorchedMonitor.visible = false;
+					scorchedTrees.visible = false;
+					scorchedFloor.visible = false;
+					scorchedRocks.visible = false;
 
-			glitchBruh.visible = true;
+					glitchBruh.visible = true;
+				case 2:
+					scorchedBg.visible = true;
+					scorchedMotain.visible = true;
+					scorchedWaterFalls.visible = true;
+					scorchedHills.visible = true;
+					scorchedMonitor.visible = true;
+					scorchedTrees.visible = true;
+					scorchedFloor.visible = true;
+					scorchedRocks.visible = true;
+
+					glitchBruh.visible = false;
+			}
 		}
 
 	function colorTweenHog()
