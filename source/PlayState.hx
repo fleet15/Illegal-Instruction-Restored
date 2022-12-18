@@ -5815,6 +5815,10 @@ class PlayState extends MusicBeatState
 						case 4135:
 							revivedIsPissed(1);
 							revivedIsPissed(2);
+						case 4340:
+							glitchKill(dad, true);
+							glitchKill(boyfriend, true);
+							glitchKill(gf, true);
 					}
 				}
 			 case'malediction':
