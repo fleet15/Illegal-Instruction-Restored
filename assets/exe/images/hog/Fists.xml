@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Fists.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Fists idle0000" x="0" y="0" width="201" height="334" frameX="-1" frameY="-6" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0001" x="0" y="0" width="201" height="334" frameX="-1" frameY="-6" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0002" x="201" y="0" width="203" height="336" frameX="0" frameY="-4" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0003" x="201" y="0" width="203" height="336" frameX="0" frameY="-4" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0004" x="404" y="0" width="204" height="338" frameX="0" frameY="-2" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0005" x="404" y="0" width="204" height="338" frameX="0" frameY="-2" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0006" x="608" y="0" width="204" height="339" frameX="0" frameY="-1" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0007" x="608" y="0" width="204" height="339" frameX="0" frameY="-1" frameWidth="205" frameHeight="340"/>
+	<SubTexture name="Fists idle0008" x="812" y="0" width="205" height="340"/>
+	<SubTexture name="Fists idle0009" x="812" y="0" width="205" height="340"/>
+	<SubTexture name="Fists idle0010" x="812" y="0" width="205" height="340"/>
+	<SubTexture name="Fists idle0011" x="812" y="0" width="205" height="340"/>
+	<SubTexture name="Fists idle0012" x="812" y="0" width="205" height="340"/>
+	<SubTexture name="Fists idle0013" x="812" y="0" width="205" height="340"/>
+</TextureAtlas>

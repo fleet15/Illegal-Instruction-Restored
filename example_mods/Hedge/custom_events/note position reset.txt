@@ -1,2 +1,0 @@
-puts notes back to where they need 2 be
-MAKE VALUE1: 1 to reset position yeah..

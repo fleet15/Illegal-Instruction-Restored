@@ -28,7 +28,7 @@ using StringTools;
 
 class BallsFreeplay extends MusicBeatState
 {
-    var songs:Array<String> = ['breakout', 'soulless-endeavors', 'final-frontier', 'my-horizon', 'our-horizon', 'found-you', 'malediction', 'long-sky', 'hedge', 'manual-blast', 'endless', 'perdition',];
+    var songs:Array<String> = ['breakout', 'soulless-endeavors', 'final-frontier', 'my-horizon', 'our-horizon', 'found-you', 'malediction', 'long-sky', 'hedge', 'manual-blast', 'perdition', 'corinthians', 'endless',];
     private var curSelected:Int = 0;
     private var grpImages:FlxTypedGroup<MenuItemAgainFuckYou>;
     var bg:FlxSprite;
@@ -64,8 +64,8 @@ class BallsFreeplay extends MusicBeatState
 
         for (i in 0...songs.length){
             imageName = 'freeplay/' + songs[i];
-            if(songs[i] == '' || songs[i] == ''){
-                imageName = 'freeplay/placeholder';
+            if(songs[i] == 'perdition' || songs[i] == 'corinthians'){
+                imageName = 'freeplay/satan/${songs[i]}';
             }
 
             selectorSprite = new MenuItemAgainFuckYou(1300 * i, 0, imageName);

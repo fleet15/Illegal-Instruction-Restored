@@ -444,6 +444,11 @@ class PlayState extends MusicBeatState
 	var hogTrees:BGSprite;
 	var hogRocks:BGSprite;
 	var hogOverlay:BGSprite;
+
+	//hjog buddwdswAdnkjn
+	var fists:FlxSprite;
+	var prowler:FlxSprite;
+
 	//manual blast
 	var scorchedBg:BGSprite;
 	var scorchedMotain:BGSprite;
@@ -453,6 +458,7 @@ class PlayState extends MusicBeatState
 	var scorchedHills:FlxSprite;
 	var scorchedTrees:BGSprite;
 	var scorchedRocks:BGSprite;
+	var glitchBruh:FlxSprite;
 
 	//mazin (THE FUN IS INFINITE)
 
@@ -1069,7 +1075,7 @@ class PlayState extends MusicBeatState
 			case 'hog':
 
 				//
-				/**
+				/***
 				dQvJjL*J@$$YUfZ#C0YO%mtc*#wucC#b0qnUzzwdv0*UJYB$$80ccjUvuULZCpX#YYzahpcxY*n0nQ/JrL8JC$$@8nO*0zd*UW8huL#MY
 				@BBB@B%@@@@BBBB8B@@@@B@BB%B@@%%%B@@#BBBB@BB@%B@@$$@@@@B%@@@@BBBBB%@B@%@%@BBBBB@%@BBBB@@@BB@@%%@@B@BB@%8%%
 				raXwdbJUh8@/p|0acp0batwd*c|Cmpq(tJd|ZfUpt)jX)kMB@B#B*0pmpw*WMCxm*hW0ZfohCvnqdqjk*Xtz0q&@bUa8bamhX%n|fk#tf
@@ -1237,13 +1243,7 @@ class PlayState extends MusicBeatState
 						scorchedWaterFalls.scrollFactor.set(1, 1);
 						add(scorchedWaterFalls);
 
-						//scorchedHills = new BGSprite('hog/blast/Hills', -100, 230, 1, 0.9);
-						//add(scorchedHills);
-						scorchedHills = new FlxSprite(-100, 230);
-						scorchedHills.frames = Paths.getSparrowAtlas('hog/blast/Hills', 'exe');
-						scorchedHills.animation.addByPrefix('loops', 'DumbassMF', 12);
-						scorchedHills.animation.play('loops');
-						scorchedHills.scrollFactor.set(1, 0.9);
+						scorchedHills = new BGSprite('hog/blast/Hills', -100, 230, 1, 0.9);
 						add(scorchedHills);
 		
 						scorchedMonitor = new FlxSprite(1100, 265);
@@ -1270,6 +1270,15 @@ class PlayState extends MusicBeatState
 						scorchedRocks.scale.x = 1.25;
 						scorchedRocks.scale.y = 1.25;
 
+						glitchBruh = new FlxSprite(-500, -200);
+						glitchBruh.frames = Paths.getSparrowAtlas('hog/blast/glitchhog', 'exe');
+						glitchBruh.animation.addByPrefix('glitch', 'glitchhog idle', 12);
+						glitchBruh.animation.play('glitch');
+						glitchBruh.scale.x = 1.25;
+						glitchBruh.scale.y = 1.50;
+						glitchBruh.scrollFactor.set(1, 1);
+						add(glitchBruh);
+
 						scorchedBg.visible = false;
 						scorchedMotain.visible = false;
 						scorchedWaterFalls.visible = false;
@@ -1279,7 +1288,22 @@ class PlayState extends MusicBeatState
 						scorchedFloor.visible = false;
 						scorchedRocks.visible = false;
 
+						glitchBruh.visible = false;
+
 					}else if(SONG.song.toLowerCase() == 'hedge'){
+						prowler = new FlxSprite(-70, 150);
+						prowler.frames = Paths.getSparrowAtlas('hog/Prowler', 'exe');
+						prowler.animation.addByPrefix('idle', 'Prowler idle', 24);
+						prowler.animation.play('idle');
+						add(prowler);
+
+						fists = new FlxSprite(1280, 460);
+						fists.frames = Paths.getSparrowAtlas('hog/Fists', 'exe');
+						fists.animation.addByPrefix('idle', 'Fists idle', 24);
+						fists.animation.play('idle');
+						fists.scale.set(1.4, 1.4);
+						add(fists);
+
 						camGlitchShader = new GlitchShaderB();
 						camGlitchShader.iResolution.value = [FlxG.width, FlxG.height];
 						camGlitchFilter = new ShaderFilter(camGlitchShader);
@@ -1410,9 +1434,11 @@ class PlayState extends MusicBeatState
 				frontierGround.scale.x = 2.0;
 				frontierGround.scale.y = 2.0;
 				add(frontierGround)	;
-
 				
-
+			case 'hell':
+				var background:BGSprite = new BGSprite('apollyon/bg', -600, -200);
+				add(background);
+				
 			default: //lol
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -1660,6 +1686,12 @@ class PlayState extends MusicBeatState
 				dad.y -= 175;
 
 				gfGroup.visible = false;
+			case 'hell':
+				boyfriend.y -= 20;
+				dad.x -= 70;
+				dad.y -= 50;
+
+				gfGroup.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -1702,7 +1734,11 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		switch(SONG.song.toLowerCase())
+		{
+			default:
+				timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		}
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -2144,6 +2180,8 @@ class PlayState extends MusicBeatState
 						});
 					camHUD.visible = false;
 					startCountdown();
+				case 'final-frontier':
+					startCountdown();
 				
 				default:
 					startCountdown();
@@ -2178,6 +2216,13 @@ class PlayState extends MusicBeatState
 		callOnLuas('onCreatePost', []);
 
 		super.create();
+
+		switch(curStage)
+		{
+			case 'frontier':
+				camHUD.alpha = 0;
+				camGame.alpha = 0;
+		}
 
 		Paths.clearUnusedMemory();
 		CustomFadeTransition.nextCamera = camOther;
@@ -2654,6 +2699,11 @@ class PlayState extends MusicBeatState
 							}
 						});
 					case 4:
+						if(curStage == 'frontier')
+						{
+							FlxTween.tween(camGame, {alpha: 1}, 1.3, {ease: FlxEase.cubeInOut});
+							FlxTween.tween(camHUD, {alpha: 1}, 1.5, {ease: FlxEase.cubeInOut});
+						}
 				}
 
 				notes.forEachAlive(function(note:Note) {
@@ -3199,6 +3249,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
@@ -3252,12 +3303,24 @@ class PlayState extends MusicBeatState
 		emeraldTween += 0.01;
 		//fjdslfdsakfkda;f;dajfdsajl;aa;jd AUUUUGHHHHH
 		masterEmeraldTween += 0.02;
-		dukeTween += 0.02;
+		dukeTween = emeraldTween;
 
 		if (curStage == 'frontier')
-			{
-				itemFly.y += Math.sin(emeraldTween) * 0.5;
-			}
+		{
+			itemFly.y += Math.sin(emeraldTween) * 0.5;
+			itemFly2.y += Math.sin(masterEmeraldTween) * 1.5;
+		}
+
+		if(dad.curCharacter == 'dukep3' && curStage == 'frontier') {
+			dad.y = frontierMasterEmerald.y - 135;
+		}
+		else if(curStage == 'frontier') {
+			dad.y = 100;
+		}
+
+		if(curStage == 'hog') {
+			
+		}
 
 		
 		/*if (dad.curCharacter == 'dukep3') dis shit only work for the master emerald
@@ -4131,12 +4194,15 @@ class PlayState extends MusicBeatState
 						frontierEmeralds.visible = false;
 						frontierMasterEmerald.visible = true;
 						forFucksSake = true;
+						boyfriend.visible = false;
+						gf.visible = false;
 					case 2:
 						frontierGround.visible = true;
 						frontierEmeralds.visible = true;
 						frontierMasterEmerald.visible = false;
 						forFucksSake = false;
-	
+						boyfriend.visible = true;
+						gf.visible = true;
 				}
 			case 'FF Static':
 				var value:Int = Std.parseInt(value1);
@@ -4341,6 +4407,12 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+					switch(SONG.song.toLowerCase())
+					{
+						case 'final-frontier':
+							ClientPrefs.beatDuke = true;
+					}
 
 					cancelMusicFadeTween();
 					if(FlxTransitionableState.skipNextTransIn) {
@@ -5465,6 +5537,28 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(camHUD, {alpha: 0}, 1.75, {ease: FlxEase.cubeInOut});
 						}
 					}
+		case 'final-frontier':
+			{
+				switch (curStep)
+				{
+					case 3904:
+						FlxTween.tween(camGame, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
+					case 3934:
+						FlxTween.tween(camGame, {alpha: 1}, 1, {ease: FlxEase.cubeInOut});
+					case 4447:
+						FlxTween.tween(camGame, {alpha: 0.75}, 0.5, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(camHUD, {alpha: 0.75}, 0.5, {ease: FlxEase.cubeInOut});
+					case 4456:
+						FlxTween.tween(camGame, {alpha: 0.5}, 0.5, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(camHUD, {alpha: 0.5}, 0.5, {ease: FlxEase.cubeInOut});
+					case 4464:
+						FlxTween.tween(camGame, {alpha: 0.25}, 0.5, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(camHUD, {alpha: 0.25}, 0.5, {ease: FlxEase.cubeInOut});
+					case 4472:
+						FlxTween.tween(camGame, {alpha: 0}, 0.5, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(camHUD, {alpha: 0}, 0.5, {ease: FlxEase.cubeInOut});
+				}	
+			}
 
 		case 'my-horizon':
 			{
@@ -5721,6 +5815,10 @@ class PlayState extends MusicBeatState
 						case 4135:
 							revivedIsPissed(1);
 							revivedIsPissed(2);
+						case 4340:
+							glitchKill(dad, true);
+							glitchKill(boyfriend, true);
+							glitchKill(gf, true);
 					}
 				}
 			 case'malediction':
@@ -5794,7 +5892,9 @@ class PlayState extends MusicBeatState
 									camGame.setFilters([camGlitchFilter, staticOverlay]);
 									camHUD.setFilters([camGlitchFilter]);
 								}
-
+							case 4160:
+								if(!ClientPrefs.epilepsy)
+									scyorchedStuff();
 							case 4672:
 								if(ClientPrefs.flashing){
 									camGame.setFilters([camGlitchFilter, camFuckFilter, staticOverlay]);
@@ -5807,7 +5907,8 @@ class PlayState extends MusicBeatState
 										scorchedMotain.destroy();
 									});*/
 									camFuckShader.amount = 0.01;
-								glitchKill(scorchedMotain);
+									if(ClientPrefs.epilepsy)
+										glitchKill(scorchedMotain);
 							case 4704:
 								/*FlxFlicker.flicker(scorchedWaterFalls, 1.5, 0.04, false, false, function(flick:FlxFlicker)
 									{
@@ -5815,26 +5916,33 @@ class PlayState extends MusicBeatState
 										scorchedWaterFalls.destroy();
 									});*/
 									camFuckShader.amount = 0.035;
-								glitchKill(scorchedWaterFalls);
+									if(ClientPrefs.epilepsy)
+										glitchKill(scorchedWaterFalls);
 							case 4736:
 								camFuckShader.amount = 0.075;
-								glitchKill(scorchedHills);
-								glitchKill(scorchedMonitor);
+								if(ClientPrefs.epilepsy){
+									glitchKill(scorchedHills);
+									glitchKill(scorchedMonitor);
+								}
 							case 4920:
-								glitchKill(scorchedBg);
+								if(ClientPrefs.epilepsy)
+									glitchKill(scorchedBg);
 							case 4944:
-								glitchKill(boyfriend, true);
+									glitchKill(boyfriend, true);
 								piss.push(FlxTween.tween(camFuckShader, {amount: 0.3}, 4, {
 									ease: FlxEase.cubeInOut
 								}));
 							case 4960:
-								glitchKill(scorchedTrees);
+								if(ClientPrefs.epilepsy)
+									glitchKill(scorchedTrees);
 							case 4978:
-								glitchKill(scorchedRocks);
+								if(ClientPrefs.epilepsy)
+									glitchKill(scorchedRocks);
 							case 4992:
-								glitchKill(scorchedFloor);
+								if(ClientPrefs.epilepsy)
+									glitchKill(scorchedFloor);
 							case 5000:
-								glitchKill(dad, true);
+									glitchKill(dad, true);
 								FlxTween.tween(camGame, {alpha: 0});
 								FlxTween.tween(camHUD, {alpha: 0});
 						}
@@ -6084,7 +6192,6 @@ class PlayState extends MusicBeatState
 			hogTrees.visible = false;
 			hogFloor.visible = false;
 			hogRocks.visible = false;
-
 		
 			scorchedBg.visible = true;
 			scorchedMotain.visible = true;
@@ -6094,6 +6201,20 @@ class PlayState extends MusicBeatState
 			scorchedTrees.visible = true;
 			scorchedFloor.visible = true;
 			scorchedRocks.visible = true;
+		}
+
+		function scyorchedStuff() 
+		{
+			scorchedBg.visible = false;
+			scorchedMotain.visible = false;
+			scorchedWaterFalls.visible = false;
+			scorchedHills.visible = false;
+			scorchedMonitor.visible = false;
+			scorchedTrees.visible = false;
+			scorchedFloor.visible = false;
+			scorchedRocks.visible = false;
+
+			glitchBruh.visible = true;
 		}
 
 	function colorTweenHog()

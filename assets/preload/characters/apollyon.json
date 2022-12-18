@@ -1,100 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				340,
+				27
 			],
-			"anim": "left",
+			"loop": false,
 			"fps": 24,
-			"name": "Apollyon left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left Pose"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				-61,
+				12
 			],
-			"anim": "singleft",
+			"loop": false,
 			"fps": 24,
-			"name": "Apollyon left",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right Pose"
 		},
 		{
+			"offsets": [
+				82,
+				171
+			],
 			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up Pose"
+		},
+		{
+			"offsets": [
+				97,
+				-168
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down Pose"
+		},
+		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Apollyon idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Apollyon left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Apollyon down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Apollyon up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Apollyon right",
+			"name": "Idle",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Apollyon",
 	"position": [
-		-190,
-		150
+		30,
+		180
 	],
-	"healthicon": "apollyon",
+	"healthicon": "icon-apollyon",
 	"flip_x": false,
 	"healthbar_colors": [
-		95,
-		100,
-		155
+		40,
+		41,
+		52
 	],
 	"camera_position": [
-		-200,
-		130
+		-150,
+		170
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 0.9
 }

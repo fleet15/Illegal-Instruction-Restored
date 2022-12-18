@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "bf-per",
-		"gfVersion": "gf",
+		"player1": "bf",
+		"gfVersion": "GFatanact2",
 		"notes": [
 			{
 				"sectionBeats": 4,
@@ -4883,62 +4883,12 @@
 				"bpm": 180
 			},
 			{
+				"gfSection": false,
+				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"bpm": 180,
 				"sectionBeats": 4,
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 180,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 180
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 180
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 180
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 180,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 180,
 				"changeBPM": false,
 				"mustHitSection": true
 			}
@@ -5730,9 +5680,9 @@
 		"song": "corinthians",
 		"needsVoices": false,
 		"arrowSkin": "",
-		"stage": "apollyon",
+		"stage": "hell",
 		"validScore": true,
 		"bpm": 180,
-		"speed": 3
+		"speed": 3.6
 	}
 }

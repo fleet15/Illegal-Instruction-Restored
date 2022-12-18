@@ -1,34 +1,41 @@
 {
-	"storyName": "So many souls..",
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"weekBefore": "Chaotix",
-	"startUnlocked": true,
-	"weekCharacters": [
-		"apollyon",
-		"bf",
-		"gf"
-	],
 	"songs": [
 		[
 			"perdition",
-			"duke",
+			"apollyon",
 			[
-				206,
-				20,
-				13
+				0,
+				0,
+				113
 			]
 		],
 		[
 			"corinthians",
-			"dad",
+			"apollyon",
 			[
-				146,
-				113,
-				253
+				6,
+				0,
+				35
 			]
 		]
 	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"hog",
+		"bf",
+		"gf"
+	],
+	"storyName": "apollyon",
+	"weekName": "apollyon",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
 	"hideStoryMode": false,
-	"weekName": "Apollyon"
+	"weekBefore": "tutorial",
+	"startUnlocked": false
 }

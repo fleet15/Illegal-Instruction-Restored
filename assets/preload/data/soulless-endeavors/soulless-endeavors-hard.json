@@ -3,56 +3,6 @@
 		"player1": "bf",
 		"events": [
 			[
-				6857.14285714286,
-				[
-					[
-						"Change Scrolltype",
-						"on",
-						"on"
-					]
-				]
-			],
-			[
-				34285.7142857143,
-				[
-					[
-						"Change Scrolltype",
-						"off",
-						"off"
-					]
-				]
-			],
-			[
-				41142.8571428572,
-				[
-					[
-						"Change Scrolltype",
-						"on",
-						"on"
-					]
-				]
-			],
-			[
-				48000,
-				[
-					[
-						"Change Scrolltype",
-						"off",
-						"on"
-					]
-				]
-			],
-			[
-				68550.0000000001,
-				[
-					[
-						"Change Scrolltype",
-						"off",
-						"off"
-					]
-				]
-			],
-			[
 				68571.4285714286,
 				[
 					[
@@ -68,56 +18,6 @@
 				]
 			],
 			[
-				75428.5714285715,
-				[
-					[
-						"Change Scrolltype",
-						"off",
-						"on"
-					]
-				]
-			],
-			[
-				119357.142857143,
-				[
-					[
-						"Lyrics",
-						"ARGH",
-						"AA0000"
-					]
-				]
-			],
-			[
-				120535.714285714,
-				[
-					[
-						"Lyrics",
-						"YOU RUNT ",
-						"AA0000"
-					]
-				]
-			],
-			[
-				122035.714285714,
-				[
-					[
-						"Lyrics",
-						"I\"LL GET YOU",
-						"AA0000"
-					]
-				]
-			],
-			[
-				123000,
-				[
-					[
-						"Lyrics",
-						"",
-						""
-					]
-				]
-			],
-			[
 				123428.571428571,
 				[
 					[
@@ -129,76 +29,6 @@
 						"Change Character",
 						"dad",
 						"dukep2"
-					]
-				]
-			],
-			[
-				161464.285714286,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				161892.857142857,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				162321.428571428,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				162750,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				163178.571428571,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				163714.285714286,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				164250,
-				[
-					[
-						"Red Flash Camera",
-						"1",
-						""
 					]
 				]
 			]
@@ -7795,76 +7625,6 @@
 				"mustHitSection": true,
 				"changeBPM": false,
 				"bpm": 140
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 140,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 140,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"gfSection": false,
-				"bpm": 140,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 140,
-				"changeBPM": false,
-				"mustHitSection": true
 			},
 			{
 				"gfSection": false,

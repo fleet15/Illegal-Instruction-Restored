@@ -30,7 +30,8 @@ class StoryMenuState extends MusicBeatState
 		"normal",
 		"curse",
 		"hog",
-		"chotix"
+		"chotix",
+		"apollyon"
 	];
 	var scoreText:FlxText;
 
