@@ -299,17 +299,15 @@ class MainMenuState extends MusicBeatState
 			#if desktop
 			if (FlxG.keys.justPressed.EIGHT)
 				{
-					FlxG.save.data.beatduke = true;
-					FlxG.save.data.beatchaotix = true;
-					FlxG.save.data.beatnormal = true;
+					ClientPrefs.beatduke = true;
+					ClientPrefs.beatchaotix = true;
+					ClientPrefs.beatnormal = true;
 				}
 			if (FlxG.keys.justPressed.NINE)
 				{
-					FlxG.save.data.beatduke = false;
-					FlxG.save.data.beatchaotix = false;
-					FlxG.save.data.beatnormal = false;
-					FlxG.save.data.video = false
-					FlxG.switchState(new Intro())
+					ClientPrefs.beatduke = false;
+					ClientPrefs.beatchaotix = false;
+					ClientPrefs.beatnormal = false;
 				}
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{

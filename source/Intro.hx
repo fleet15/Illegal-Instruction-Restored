@@ -36,7 +36,7 @@ using StringTools;
 class Intro extends MusicBeatState
 {
     override public function create()
-    {
+    {   
         FlxG.mouse.visible = false;
 		FlxG.sound.volume = 10;
 
@@ -44,24 +44,14 @@ class Intro extends MusicBeatState
   		FlxG.sound.volumeDownKeys = [];
   		FlxG.sound.volumeUpKeys = [];
 
-        if(FlxG.save.data.video == null)
-            FlxG.save.data.video = false;
+        var video:MP4Handler = new MP4Handler();
+        video.playVideo(Paths.video('Intro'));
+        video.finishCallback = function()
+        {
+            FlxG.sound.muteKeys = TitleState.muteKeys;
+            FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
+            FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;    
 
-        if(!FlxG.save.data.video) {
-            var video:MP4Handler = new MP4Handler();
-            video.playVideo(Paths.video('Intro'));
-            video.finishCallback = function()
-            {
-                FlxG.save.data.video = true;
-
-                FlxG.sound.muteKeys = TitleState.muteKeys;
-                FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
-                FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;    
-
-                LoadingState.loadAndSwitchState(new TitleState());
-            }
-        }
-        else {
             LoadingState.loadAndSwitchState(new TitleState());
         }
     }
