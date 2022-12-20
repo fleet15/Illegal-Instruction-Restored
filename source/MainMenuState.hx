@@ -305,7 +305,11 @@ class MainMenuState extends MusicBeatState
 				}
 			if (FlxG.keys.justPressed.NINE)
 				{
-					MusicBeatState.switchState(new CollectionRoomState());
+					FlxG.save.data.beatduke = false;
+					FlxG.save.data.beatchaotix = false;
+					FlxG.save.data.beatnormal = false;
+					FlxG.save.data.video = false
+					FlxG.switchState(new Intro())
 				}
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{

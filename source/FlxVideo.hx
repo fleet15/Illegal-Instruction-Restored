@@ -50,16 +50,23 @@ class FlxVideo extends FlxBasic {
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
 		vlcBitmap = new VlcBitmap();
-		vlcBitmap.set_height(FlxG.stage.stageHeight);
-		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
+		if (FlxG.stage.stageHeight / 9 < FlxG.stage.stageWidth / 16)
+		{
+			vlcBitmap.set_height(FlxG.stage.stageHeight);
+			vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
+		}
+		else
+		{
+			vlcBitmap.set_height(FlxG.stage.stageWidth / (16 / 9));
+			vlcBitmap.set_width(FlxG.stage.stageWidth);	
+		}
+		
 
 		vlcBitmap.onComplete = onVLCComplete;
 		vlcBitmap.onError = onVLCError;
 
 		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
 		vlcBitmap.repeat = 0;
-		vlcBitmap.inWindow = false;
-		vlcBitmap.fullscreen = false;
 		fixVolume(null);
 
 		FlxG.addChildBelowMouse(vlcBitmap);
