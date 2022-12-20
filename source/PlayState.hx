@@ -476,7 +476,10 @@ class PlayState extends MusicBeatState
 
 	var scoreRandom:Bool = false;
 
-	//dodging Shit
+	// - dodge mechanic bullshit
+
+	var canDodge:Bool = false;
+	var dodging:Bool = false;
 
 	override public function create()
 	{
@@ -1689,11 +1692,12 @@ class PlayState extends MusicBeatState
 
 				gfGroup.visible = false;
 			case 'hell':
-				boyfriend.y -= 20;
-				dad.x -= 70;
-				dad.y -= 50;
-
-				gfGroup.visible = false;
+				boyfriend.y += 100;
+				dad.x -= 520;
+				dad.y -= 150;
+				dad.cameraPosition = [80, 150];
+				
+				gf.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -3251,7 +3255,66 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		
+		if (canDodge && FlxG.keys.justPressed.SPACE)
+		{
+			dodging = true;
+			boyfriend.playAnim('dodge', true);
+			boyfriend.specialAnim = true;
+
+			boyfriend.animation.finishCallback = function(a:String)
+			{
+				if(a == 'dodge'){
+					new FlxTimer().start(0.5, function(a:FlxTimer)
+					{
+						dodging = false;
+						canDodge = false;
+						boyfriend.specialAnim = false;
+						trace('didnt die?');
+						// im using bandage method for this shit cus it keeps breaking for some unholy reason
+						// fleetway you make me want to kill myself i swear to god
+					});
+				}
+			}
+		}
+
+
+		var loser:Float = health;
+		var cooldown:Bool = false;
+		var dodgeActive:Bool = false;
+
+		if (dad.curCharacter == 'hog' && dad.animation.curAnim.name == 'charge' && dad.animation.curAnim.curFrame == 0)
+		{
+			if (!cooldown) {
+				makeWarning();
+				trace('warning made');
+				canDodge = true;
+				cooldown = true;
+			}
+		}
+		if (dad.curCharacter == 'hog' && dad.animation.curAnim.name == 'zoom' && dad.animation.curAnim.curFrame == 0)
+		{
+			trace('dodge active');
+		}
+		if (dad.curCharacter == 'hog' && dad.animation.curAnim.name == 'jump' && dad.animation.curAnim.curFrame == 8)
+		{
+			if(!dodging)
+				health = 0;
+			if(dodging)
+				health = loser;
+		}
+		if (dad.curCharacter == 'hog' && dad.animation.curAnim.name == 'jump')
+		{
+			dad.animation.finishCallback = function(jump:String)
+			{
+				canDodge = false;
+			}
+		}
+		/*  if (dad.curCharacter == 'hog' && dad.animation.curAnim.curFrame == 15 && !dodging)
+		{
+			health = 0;
+		}
+		*/
+
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
@@ -6245,6 +6308,27 @@ class PlayState extends MusicBeatState
 					theStatic.alpha = 0;
 				});
 		}
+	
+	function makeWarning()
+	{
+		var warning:FlxSprite = new FlxSprite(boyfriend.x - 25, boyfriend.y - 30);
+		warning.frames = Paths.getSparrowAtlas("hog/TargetLock", 'exe');
+		warning.animation.addByPrefix('warn', 'TargetLock', 24, false);
+		warning.alpha = 0;
+		add(warning);
+		//warning.setGraphicSize(Std.int(warning.width * 2.5));
+
+		new FlxTimer().start(0.2, function(lol:FlxTimer)
+		{
+			FlxTween.tween(warning, {alpha: 1}, 0.5);
+			warning.animation.play("warn", true);
+			warning.animation.finishCallback = function(warn:String)
+			{
+				remove(warning);
+				warning.destroy();
+			}
+		});
+	}
 
 	function chaotixGlass(ass:Int)
 		{

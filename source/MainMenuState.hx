@@ -299,15 +299,15 @@ class MainMenuState extends MusicBeatState
 			#if desktop
 			if (FlxG.keys.justPressed.EIGHT)
 				{
-					ClientPrefs.beatduke = true;
-					ClientPrefs.beatchaotix = true;
-					ClientPrefs.beatnormal = true;
+					ClientPrefs.beatDuke = true;
+					ClientPrefs.beatChaotix = true;
+					ClientPrefs.beatNormal = true;
 				}
 			if (FlxG.keys.justPressed.NINE)
 				{
-					ClientPrefs.beatduke = false;
-					ClientPrefs.beatchaotix = false;
-					ClientPrefs.beatnormal = false;
+					ClientPrefs.beatDuke = false;
+					ClientPrefs.beatChaotix = false;
+					ClientPrefs.beatNormal = false;
 				}
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{

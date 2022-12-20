@@ -90,15 +90,27 @@ class BallsFreeplay extends MusicBeatState
             changeSelection(1);
         if(controls.UI_LEFT_P)
             changeSelection(-1);
-        if(accepted){
+        if(accepted) {
             var songLowercase:String = Paths.formatToSongPath(songs[curSelected]);
             FlxG.sound.play(Paths.sound('confirmMenu'));
             PlayState.SONG = Song.loadFromJson(songLowercase + '-hard', songLowercase);
 			PlayState.isStoryMode = false;
-            /* im sad this doesn't work :(((((
-            FlxTween.tween(selectorSprite, {"scale.x": selectorSprite.scale.x + 1, "scale.y": selectorSprite.scale.y + 1}, 1, {ease: FlxEase.cubeInOut});
-            FlxTween.tween(selectorSprite, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
-            */
+            // im sad this doesn't work :(((((
+            // i fixed it, whoever this was
+            grpImages.forEach(function(spr:FlxSprite)
+            {
+                if (curSelected == spr.ID)
+                {
+                    FlxTween.tween(spr.scale, {x: 2, y: 2}, 1, {ease: FlxEase.cubeInOut});
+                    FlxTween.tween(spr, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
+                }
+                else
+                {
+                    FlxTween.tween(spr.scale, {x: 0, y: 0}, 1, {ease: FlxEase.cubeInOut});
+                    FlxTween.tween(spr, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
+                }
+            }); 
+            
             FlxTween.tween(bg, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
             new FlxTimer().start(1, function(tmr:FlxTimer)
                 {
