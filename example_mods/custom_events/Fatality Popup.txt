@@ -1,0 +1,2 @@
+Value 2 = timer for destroy. If black,
+the Popup will not be destroyed.

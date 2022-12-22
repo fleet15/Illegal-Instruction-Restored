@@ -28,7 +28,7 @@ using StringTools;
 
 class BallsFreeplay extends MusicBeatState
 {
-    var songs:Array<String> = ['breakout', 'soulless-endeavors', 'final-frontier', 'my-horizon', 'our-horizon', 'found-you', 'malediction', 'long-sky', 'hedge', 'manual-blast', 'perdition', 'corinthians', 'endless',];
+    var songs:Array<String> = ['breakout', 'soulless-endeavors', 'final-frontier', 'my-horizon', 'our-horizon', 'found-you', 'malediction', 'long-sky', 'endless', 'hedge', 'manual-blast',];
     private var curSelected:Int = 0;
     private var grpImages:FlxTypedGroup<MenuItemAgainFuckYou>;
     var bg:FlxSprite;

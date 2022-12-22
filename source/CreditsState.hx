@@ -81,26 +81,19 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Psych Engine Team'],
-			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
-			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],
-			['shubs',				'shubs',			'Additional Programmer of Psych Engine',					'https://twitter.com/yoshubs',			'279ADC'],
+			['II Revsion Team'],
+			['FleetDev',		'fleet',			'Main Director and Coder',																							'https://www.youtube.com/@Fleet-Dev-Official/',								'279ADC'],
+			['Razalzy',			'raz',				'Co Director and Main Coder for the mod',																			'https://www.youtube.com/@razalzy',											'279ADC'],
+			['Retro',			'retro',			'Artist for Prowler and Fists',																						'https://twitter.com/Retronsons',											'279ADC'],
+			['Solumix',			'solu',				'Artist for Charmy Mighty And Vector',																				'https://www.youtube.com/channel/UCXg_pPNuibYfiE7ii_suWFA',					'279ADC'],
+			['Cytal',			'cytal',			'Artist for Apollyon BG and Composer for Final Frontier Newtrogic Mix',												'https://twitter.com/cytaldraws2',											'279ADC'],
+			['ItsFellow',		'fellow',			'Composer for Final Frontier Full Version',																			'https://www.youtube.com/channel/UCXhlnCQgCMj7o6Syru_cZcQ',					'279ADC'],
 			[''],
-			['Former Engine Members'],
-			['bb-panzu',			'bb-panzu',			'Ex-Programmer of Psych Engine',							'https://twitter.com/bbsub3',			'389A58'],
+			['Former Team Members'],
+			['Fl4re',			'flare',			'Ex-Composer of Final Frontier Full Version Fl4re Mix',																'https://www.youtube.com/@fl4re686',										'279ADC'],
 			[''],
-			['Engine Contributors'],
-			['iFlicky',				'iflicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',	'https://twitter.com/flicky_i',			'AA32FE'],
-			['SqirraRNG',			'gedehari',			'Chart Editor\'s Sound Waveform base',						'https://twitter.com/gedehari',			'FF9300'],
-			['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',								'https://twitter.com/polybiusproxy',	'FFEAA6'],
-			['Keoiki',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Keoiki_',			'FFFFFF'],
-			['Smokey',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/Smokey_5_',		'4D5DBD'],
-			[''],
-			["Funkin' Crew"],
-			['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",						'https://twitter.com/ninja_muffin99',	'F73838'],
-			['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",							'https://twitter.com/PhantomArcade3K',	'FFBB1B'],
-			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",							'https://twitter.com/evilsk8r',			'53E52C'],
-			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",							'https://twitter.com/kawaisprite',		'6475F3']
+			["OG II Devs"],
+			['The long ass list',		'og',	"This list is way to long look in the Wiki page if you want to see them and support them",								'https://fridaynightfunking.fandom.com/wiki/ILLEGAL_INSTRUCTION#undefined',	'279ADC']
 		];
 		
 		for(i in pisspoop){

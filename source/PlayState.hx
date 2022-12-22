@@ -1217,7 +1217,7 @@ class PlayState extends MusicBeatState
 
 						staticlol = new StaticShader();
 						staticOverlay = new ShaderFilter(staticlol);
-						// camGame.setFilters([new ShaderFilter(staticlol)]);
+						camGame.setFilters([new ShaderFilter(staticlol)]);
 						staticlol.iTime.value = [0];
 						staticlol.iResolution.value = [FlxG.width, FlxG.height];
 						staticlol.alpha.value = [staticAlpha];
@@ -1233,12 +1233,21 @@ class PlayState extends MusicBeatState
 						scorchedBg.scale.x = 1.75;
 						scorchedBg.scale.y = 1.75;
 						add(scorchedBg);
-		
+
+						glitchBruh = new FlxSprite(-500, -150);
+						glitchBruh.frames = Paths.getSparrowAtlas('hog/blast/glitchhog', 'exe');
+						glitchBruh.animation.addByPrefix('glitch', 'glitchhog idle', 25);
+						glitchBruh.animation.play('glitch');
+						glitchBruh.scale.x = 6.25;
+						glitchBruh.scale.y = 6.50;
+						glitchBruh.scrollFactor.set(1, 1);
+						add(glitchBruh);
+
 						scorchedMotain = new BGSprite('hog/blast/Mountains', 0, 0, 1.1, 0.9);
 						scorchedMotain.scale.x = 1.5;
 						scorchedMotain.scale.y = 1.5;
 						add(scorchedMotain);
-		
+
 						scorchedWaterFalls = new FlxSprite(-1000, 200);
 						scorchedWaterFalls.frames = Paths.getSparrowAtlas('hog/blast/Waterfalls', 'exe');
 						scorchedWaterFalls.animation.addByPrefix('water', 'British instance 1', 12);
@@ -1261,8 +1270,7 @@ class PlayState extends MusicBeatState
 						scorchedMonitor.animation.play('idle');
 						scorchedMonitor.scrollFactor.set(1, 0.9);
 						add(scorchedMonitor);
-						
-		
+								
 						scorchedTrees = new BGSprite('hog/blast/Plants', -400, -50, 1, 0.9);
 						add(scorchedTrees);
 		
@@ -1274,15 +1282,6 @@ class PlayState extends MusicBeatState
 						scorchedRocks = new BGSprite('hog/blast/Rocks', -500, 600, 1.1, 0.9);
 						scorchedRocks.scale.x = 1.25;
 						scorchedRocks.scale.y = 1.25;
-
-						glitchBruh = new FlxSprite(-500, -150);
-						glitchBruh.frames = Paths.getSparrowAtlas('hog/blast/glitchhog', 'exe');
-						glitchBruh.animation.addByPrefix('glitch', 'glitchhog idle', 12);
-						glitchBruh.animation.play('glitch');
-						glitchBruh.scale.x = 1.25;
-						glitchBruh.scale.y = 1.50;
-						glitchBruh.scrollFactor.set(1, 1);
-						add(glitchBruh);
 
 						scorchedBg.visible = false;
 						scorchedMotain.visible = false;
@@ -5957,7 +5956,7 @@ class PlayState extends MusicBeatState
 									camGame.setFilters([camGlitchFilter, staticOverlay]);
 									camHUD.setFilters([camGlitchFilter]);
 								}
-							case 4160:
+							case 4128:
 								if(!ClientPrefs.epilepsy)
 									scyorchedStuff(1);
 							case 4672:
@@ -6258,13 +6257,13 @@ class PlayState extends MusicBeatState
 			{
 				case 1:
 					scorchedBg.visible = false;
-					scorchedMotain.visible = false;
-					scorchedWaterFalls.visible = false;
-					scorchedHills.visible = false;
+					scorchedMotain.visible = true;
+					scorchedWaterFalls.visible = true;
+					scorchedHills.visible = true;
 					scorchedMonitor.visible = false;
 					scorchedTrees.visible = false;
-					scorchedFloor.visible = false;
-					scorchedRocks.visible = false;
+					scorchedFloor.visible = true;
+					scorchedRocks.visible = true;
 
 					glitchBruh.visible = true;
 				case 2:

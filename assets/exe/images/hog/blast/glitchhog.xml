@@ -1,7 +1,65 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="glitchhog.png"><SubTexture name="glitchhog idle0000" x="0" y="0" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
-<SubTexture name="glitchhog idle0001" x="2368" y="0" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
-<SubTexture name="glitchhog idle0002" x="0" y="1005" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
-<SubTexture name="glitchhog idle0003" x="2368" y="1005" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
-<SubTexture name="glitchhog idle0004" x="0" y="2010" width="2368" height="1005" frameX="0" frameY="0" frameWidth="2368" frameHeight="1005" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Untitled-5.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="glitchhog idle0000" x="0" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0001" x="0" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0002" x="0" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0003" x="800" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0004" x="800" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0005" x="800" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0006" x="1600" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0007" x="1600" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0008" x="1600" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0009" x="2400" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0010" x="2400" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0011" x="2400" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0012" x="3200" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0013" x="3200" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0014" x="3200" y="0" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0015" x="0" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0016" x="0" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0017" x="0" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0018" x="800" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0019" x="800" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0020" x="800" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0021" x="1600" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0022" x="1600" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0023" x="1600" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0024" x="2400" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0025" x="2400" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0026" x="2400" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0027" x="3200" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0028" x="3200" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0029" x="3200" y="600" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0030" x="0" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0031" x="0" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0032" x="0" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0033" x="800" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0034" x="800" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0035" x="800" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0036" x="1600" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0037" x="1600" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0038" x="1600" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0039" x="2400" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0040" x="2400" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0041" x="2400" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0042" x="3200" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0043" x="3200" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0044" x="3200" y="1200" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0045" x="0" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0046" x="0" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0047" x="0" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0048" x="800" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0049" x="800" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0050" x="800" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0051" x="1600" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0052" x="1600" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0053" x="1600" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0054" x="2400" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0055" x="2400" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0056" x="2400" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0057" x="3200" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0058" x="3200" y="1800" width="800" height="600"/>
+	<SubTexture name="glitchhog idle0059" x="3200" y="1800" width="800" height="600"/>
 </TextureAtlas>
