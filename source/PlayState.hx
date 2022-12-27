@@ -5601,29 +5601,17 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(camHUD, {alpha: 0}, 1.75, {ease: FlxEase.cubeInOut});
 						}
 					}
-		case 'final-frontier':
+		/*case 'final-frontier':
 			{
 				switch (curStep)
 				{
-					case 3904:
-						FlxTween.tween(camGame, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
-					case 3934:
-						FlxTween.tween(camGame, {alpha: 1}, 1, {ease: FlxEase.cubeInOut});
-					case 4447:
-						FlxTween.tween(camGame, {alpha: 0.75}, 0.5, {ease: FlxEase.cubeInOut});
-						FlxTween.tween(camHUD, {alpha: 0.75}, 0.5, {ease: FlxEase.cubeInOut});
-					case 4456:
-						FlxTween.tween(camGame, {alpha: 0.5}, 0.5, {ease: FlxEase.cubeInOut});
-						FlxTween.tween(camHUD, {alpha: 0.5}, 0.5, {ease: FlxEase.cubeInOut});
-					case 4464:
-						FlxTween.tween(camGame, {alpha: 0.25}, 0.5, {ease: FlxEase.cubeInOut});
-						FlxTween.tween(camHUD, {alpha: 0.25}, 0.5, {ease: FlxEase.cubeInOut});
-					case 4472:
-						FlxTween.tween(camGame, {alpha: 0}, 0.5, {ease: FlxEase.cubeInOut});
-						FlxTween.tween(camHUD, {alpha: 0}, 0.5, {ease: FlxEase.cubeInOut});
+					case 704:
+							camGame.setFilters([barrelDistortionFilter]);
+							camHUD.setFilters([barrelDistortionFilter]);
+							FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 1.0, barrelDistortion2: 1.0}, 0.5, {ease: FlxEase.quadInOut});
 				}	
 			}
-
+*/
 		case 'my-horizon':
 			{
 				switch (curStep)

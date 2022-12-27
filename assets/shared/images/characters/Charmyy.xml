@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Charmy.png">
+<SubTexture name="Charmy Idle Loop0000" x="2979" y="711" width="454" height="705" frameX="-7" frameY="-102" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0001" x="2979" y="1416" width="454" height="705" frameX="-7" frameY="-102" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0002" x="1284" y="2252" width="454" height="711" frameX="-11" frameY="-97" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0003" x="1738" y="2252" width="454" height="711" frameX="-11" frameY="-97" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0004" x="1282" y="1515" width="450" height="717" frameX="-17" frameY="-90" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0005" x="1282" y="1515" width="450" height="717" frameX="-17" frameY="-90" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0006" x="1896" y="739" width="449" height="724" frameX="-25" frameY="-84" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0007" x="1273" y="759" width="449" height="724" frameX="-25" frameY="-84" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0008" x="1732" y="1515" width="450" height="717" frameX="-17" frameY="-90" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0009" x="2529" y="0" width="450" height="717" frameX="-17" frameY="-90" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0010" x="2192" y="2252" width="454" height="711" frameX="-11" frameY="-97" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0011" x="2979" y="0" width="454" height="711" frameX="-11" frameY="-97" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Idle Loop0012" x="2979" y="2121" width="454" height="705" frameX="-7" frameY="-102" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0000" x="3596" y="3634" width="593" height="580" frameX="-85" frameY="-15" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0001" x="3596" y="3634" width="593" height="580" frameX="-85" frameY="-15" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0002" x="1827" y="3634" width="590" height="586" frameX="-82" frameY="-12" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0003" x="1827" y="3634" width="590" height="586" frameX="-82" frameY="-12" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0004" x="2417" y="3634" width="586" height="586" frameX="-77" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0005" x="2417" y="3634" width="586" height="586" frameX="-77" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0006" x="3003" y="3634" width="593" height="583" frameX="-65" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0007" x="3003" y="3634" width="593" height="583" frameX="-65" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Right0008" x="4732" y="0" width="593" height="580" frameX="-61" frameY="-30" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0000" x="4544" y="3056" width="593" height="580" frameX="-85" frameY="-15" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0001" x="4544" y="3056" width="593" height="580" frameX="-85" frameY="-15" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0002" x="4544" y="1301" width="590" height="586" frameX="-82" frameY="-12" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0003" x="4544" y="1301" width="590" height="586" frameX="-82" frameY="-12" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0004" x="4544" y="1887" width="586" height="586" frameX="-77" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0005" x="4544" y="1887" width="586" height="586" frameX="-77" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0006" x="4544" y="2473" width="593" height="583" frameX="-65" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0007" x="4544" y="2473" width="593" height="583" frameX="-65" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0008" x="4544" y="3636" width="593" height="580" frameX="-61" frameY="-30" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0000" x="0" y="1515" width="641" height="737" frameX="-34" frameY="-40" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0001" x="641" y="1515" width="641" height="737" frameX="-34" frameY="-40" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0002" x="0" y="2252" width="642" height="717" frameX="-32" frameY="-59" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0003" x="642" y="2252" width="642" height="717" frameX="-32" frameY="-59" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0004" x="1256" y="0" width="640" height="756" frameX="-31" frameY="-24" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0005" x="0" y="759" width="640" height="756" frameX="-31" frameY="-24" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0006" x="640" y="759" width="633" height="739" frameX="-34" frameY="-27" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0007" x="1896" y="0" width="633" height="739" frameX="-34" frameY="-27" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0008" x="0" y="0" width="628" height="759" frameX="-35" frameY="-2" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Up0009" x="628" y="0" width="628" height="759" frameX="-35" frameY="-2" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0009" x="2346" y="2969" width="619" height="684" frameX="-69" frameY="-11" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0010" x="2965" y="2969" width="619" height="684" frameX="-69" frameY="-11" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0011" x="1174" y="2969" width="586" height="688" frameX="-106" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0012" x="1760" y="2969" width="586" height="688" frameX="-106" frameY="-16" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0013" x="0" y="2969" width="587" height="693" frameX="-106" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0014" x="587" y="2969" width="587" height="693" frameX="-106" frameY="-26" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0015" x="2270" y="3662" width="570" height="671" frameX="-105" frameY="-39" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0016" x="2840" y="3662" width="570" height="671" frameX="-105" frameY="-39" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0017" x="3410" y="3662" width="615" height="657" frameX="-71" frameY="-47" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Down0018" x="4544" y="0" width="615" height="657" frameX="-71" frameY="-47" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0000" x="3433" y="1388" width="542" height="688" frameX="-63" frameY="-31" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0001" x="3433" y="2076" width="542" height="688" frameX="-63" frameY="-31" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0002" x="3991" y="0" width="553" height="683" frameX="-57" frameY="-39" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0003" x="3991" y="683" width="553" height="683" frameX="-57" frameY="-39" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0004" x="3433" y="0" width="558" height="694" frameX="-57" frameY="-30" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0005" x="3433" y="694" width="558" height="694" frameX="-57" frameY="-30" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0006" x="0" y="3662" width="559" height="681" frameX="-57" frameY="-44" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0007" x="559" y="3662" width="559" height="681" frameX="-57" frameY="-44" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0008" x="1118" y="3662" width="576" height="675" frameX="-43" frameY="-50" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0009" x="1694" y="3662" width="576" height="675" frameX="-43" frameY="-50" frameWidth="1000" frameHeight="1000" />
+<SubTexture name="Charmy Left0010" x="4544" y="657" width="597" height="644" frameX="-15" frameY="-84" frameWidth="1000" frameHeight="1000" />
+</TextureAtlas>

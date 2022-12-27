@@ -1,0 +1,98 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				280
+			],
+			"anim": "idle",
+			"fps": 19,
+			"name": "Charmy Idle Loop",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				90,
+				470
+			],
+			"anim": "singUP",
+			"fps": 19,
+			"name": "Charmy Up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-50,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 19,
+			"name": "Charmy Down",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				50,
+				210
+			],
+			"anim": "singDOWN",
+			"fps": 19,
+			"name": "Charmy Down",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				160,
+				270
+			],
+			"anim": "singLEFT",
+			"fps": 19,
+			"name": "Charmy Left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Charmyy",
+	"position": [
+		-1270,
+		-890
+	],
+	"healthicon": "charmy",
+	"flip_x": false,
+	"healthbar_colors": [
+		189,
+		177,
+		171
+	],
+	"camera_position": [
+		260,
+		-70
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

@@ -37,6 +37,7 @@ class MainMenuState extends MusicBeatState
 	
 	var optionShit:Array<String> = [
 		'story_mode',
+		'newtrogic',
 		'freeplay',
 		'credits',
 		'collection',
@@ -184,6 +185,10 @@ class MainMenuState extends MusicBeatState
 					menuItem.x = 700;
 					menuItem.y = 0;
 					menuItem.scrollFactor.set(1, 1);
+				case 5:
+					menuItem.x = 1000;
+					menuItem.y = 0;
+					menuItem.scrollFactor.set(1, 1);
 			}
 				menuItem.y = 300 + (i * 350);
 
@@ -282,6 +287,8 @@ class MainMenuState extends MusicBeatState
 												MusicBeatState.switchState(new StoryMenuState());
 											case 'freeplay':
 												MusicBeatState.switchState(new BallsFreeplay());
+											case 'newtrogic':
+												MusicBeatState.switchState(new NewtrogicZone());
 											case 'collection':
 												MusicBeatState.switchState(new CollectionRoomState());
 											case 'credits':
