@@ -57,6 +57,8 @@ import flixel.input.keyboard.FlxKey;
 import Note.EventNote;
 import openfl.events.KeyboardEvent;
 import flixel.util.FlxSave;
+import sys.FileSystem;
+import sys.io.File;
 import Achievements;
 import StageData;
 import FunkinLua;
@@ -158,6 +160,7 @@ class PlayState extends MusicBeatState
 	public static var isPixelStage:Bool = false;
 	public static var SONG:SwagSong = null;
 	public static var isStoryMode:Bool = false;
+	public static var isNewtrogicMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
@@ -290,7 +293,6 @@ class PlayState extends MusicBeatState
 	// TODO: diff HUD designs
 	var isPixelHUD:Bool = false;
 	var chaotixHUD:FlxSpriteGroup;
-
 	var fcLabel:FlxSprite;
 	var ringsLabel:FlxSprite;
 	var hudDisplays:Map<String, SonicNumberDisplay> = [];
@@ -317,7 +319,6 @@ class PlayState extends MusicBeatState
 	// glad my comment above stayed lmao -neb
 	//general stuff (statics n shit...)
 	var theStatic:FlxSprite;  //THE FUNNY THE FUNNY!!!!
-
 	//duke shit
 	//entrance (ee oo ayy eh)
 	var entranceBG:FlxSprite;
@@ -333,25 +334,20 @@ class PlayState extends MusicBeatState
 	var soulPixelBg:FlxSprite;
 	var soulPixelBgBg:FlxSprite;
 	//final frontier
-
 	var frontierBg:BGSprite;
 	var frontierGround:BGSprite;
 	var frontierMasterEmerald:FlxSprite;
 	var frontierEmeralds:FlxSprite;
-	
+	var vignette:FlxSprite;
 	//GRRRR I HATE MATH I HA
 	var dadFly:Character;
 	var itemFly:FlxSprite;
 	var itemFly2:FlxSprite;
-	
 	var emeraldTween:Float = 0; 
 	var masterEmeraldTween:Float = 0;
 	var dukeTween:Float = 0;
-
 	//typed group my behatred
 	var frontierDebris:FlxTypedGroup<BGSprite>;
-
-
 	// horizon
 	var fucklesBGPixel:FlxSprite;
 	var fucklesFGPixel:FlxSprite;
@@ -366,16 +362,13 @@ class PlayState extends MusicBeatState
 	var fucklesTheHealthHog:Array<Float>;
 	var whiteFuck:FlxSprite;
 	//horizon but real
-
 	var horizonBg:FlxSprite;
 	var horizonFloor:FlxSprite;
 	var horizonTrees:FlxSprite;
 	var horizonTrees2:FlxSprite;
-
 	var horizonPurpur:FlxSprite;
 	var horizonYellow:FlxSprite;
 	var horizonRed:FlxSprite;
-	
 	var horizonAmy:FlxSprite;
 	var horizonKnuckles:FlxSprite;
 	var horizonEspio:FlxSprite;
@@ -410,10 +403,8 @@ class PlayState extends MusicBeatState
 	var normalDoor:FlxSprite;
 	var normalScreen:FlxSprite;
 	var normalChars:FlxSprite;
-
 	public var normalCharShit:Int;
 	public var normalBool:Bool = false;
-
 	//curse shit (just admit it!!!!)
 	var hexTimer:Float = 0;
 	var hexes:Float = 0;
@@ -427,7 +418,6 @@ class PlayState extends MusicBeatState
 	var curseTrees:FlxSprite;
 	var curseTreesTwo:FlxSprite;
 	var curseFountain:FlxSprite;
-
 	//hjog shit dlskafj;lsa
 	var staticlol:StaticShader;
 	var staticlmao:StaticShader;
@@ -435,7 +425,6 @@ class PlayState extends MusicBeatState
 	var glitchThingy:DistortGlitchShader;
 	var glitchOverlay:ShaderFilter;
 	private var staticAlpha:Float = 1;
-
 	var hogBg:BGSprite;
 	var hogMotain:BGSprite;
 	var hogWaterFalls:FlxSprite;
@@ -444,11 +433,9 @@ class PlayState extends MusicBeatState
 	var hogTrees:BGSprite;
 	var hogRocks:BGSprite;
 	var hogOverlay:BGSprite;
-
 	//hjog buddwdswAdnkjn
 	var fists:FlxSprite;
 	var prowler:FlxSprite;
-
 	//manual blast
 	var scorchedBg:BGSprite;
 	var scorchedMotain:BGSprite;
@@ -459,9 +446,7 @@ class PlayState extends MusicBeatState
 	var scorchedTrees:BGSprite;
 	var scorchedRocks:BGSprite;
 	var glitchBruh:FlxSprite;
-
 	//mazin (THE FUN IS INFINITE)
-
 	var mazinBg:BGSprite;
 	var mazinTrees:BGSprite;
 	var mazinPlatform:BGSprite;
@@ -470,16 +455,16 @@ class PlayState extends MusicBeatState
 	var mazinRightPlatform:BGSprite;
 	var mazinBushes:BGSprite;
 	var mazinOverlay:BGSprite;
-
 	var funIsInfinite:Bool = false;
 	var funIsForever:Bool = false;
-
 	var scoreRandom:Bool = false;
-
 	// - dodge mechanic bullshit
-
 	var canDodge:Bool = false;
 	var dodging:Bool = false;
+	//for the credits at beginning of song lol!
+	var creditsText:FlxTypedGroup<FlxText>;
+	var creditoText:FlxText;
+	var box:FlxSprite;
 
 	override public function create()
 	{
@@ -1643,6 +1628,14 @@ class PlayState extends MusicBeatState
 				theStatic.alpha = 0;
 
 				add(theStatic);
+
+				vignette = new FlxSprite(0, 0);
+				vignette.loadGraphic(Paths.image('vignette', 'exe'));
+				vignette.cameras = [camHUD];
+				vignette.setGraphicSize(FlxG.width, FlxG.height);
+				vignette.screenCenter();
+				vignette.alpha = 0;
+				add(vignette);
 
 				itemFly = frontierEmeralds;
 				itemFly2 = frontierMasterEmerald;
@@ -2810,6 +2803,66 @@ class PlayState extends MusicBeatState
 			//trace('Oopsie doopsie! Paused sound');
 			FlxG.sound.music.pause();
 			vocals.pause();
+		}
+
+		creditsText = new FlxTypedGroup<FlxText>();
+		//in here, specify your song name and then its credits, then go to the next switch
+		switch(SONG.song.toLowerCase())
+		{
+			default:
+				box = new FlxSprite(0, -1000).loadGraphic(Paths.image("box"));
+				box.cameras = [camHUD];
+				box.setGraphicSize(Std.int(box.height * 0.8));
+				box.screenCenter(X);
+				add(box);
+
+				var texti:String;
+				var size:String;
+
+				if (FileSystem.exists(Paths.json(curSong.toLowerCase() + "/credits")))
+				{
+					texti = File.getContent((Paths.json(curSong.toLowerCase() + "/credits"))).split("TIME")[0];
+					size = File.getContent((Paths.json(curSong.toLowerCase() + "/credits"))).split("SIZE")[1];
+				}
+				else
+				{
+					texti = "CREDITS\nunfinished";
+					size = '28';
+				}
+
+				creditoText = new FlxText(0, -1000, 0, texti, 28);
+				creditoText.cameras = [camHUD];
+				creditoText.setFormat(Paths.font("PressStart2P.ttf"), Std.parseInt(size), FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				creditoText.setGraphicSize(Std.int(creditoText.width * 0.8));
+				creditoText.updateHitbox();
+				creditoText.x += 515;
+				creditsText.add(creditoText);
+		}
+		add(creditsText);
+
+		//this is the timing of the box coming in, specify your song and IF NEEDED, change the amount of time it takes to come in
+		//if you want to add it to start at the beginning of the song, type " | ", then add your song name
+		//poop fart ahahahahahah
+		switch (SONG.song.toLowerCase())
+		{
+			default:
+				var timei:String;
+
+				if (FileSystem.exists(Paths.json(curSong.toLowerCase() + "/credits")))
+				{
+					timei = File.getContent((Paths.json(curSong.toLowerCase() + "/credits"))).split("TIME")[1];
+				}
+				else
+				{
+					timei = "2.35";
+				}
+
+				FlxG.log.add('BTW THE TIME IS ' + Std.parseFloat(timei));
+
+				new FlxTimer().start(Std.parseFloat(timei), function(tmr:FlxTimer)
+					{
+						tweencredits();
+					});
 		}
 
 		// Song duration in a float, useful for the time left feature
@@ -4482,6 +4535,11 @@ class PlayState extends MusicBeatState
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
+					/* if(!isNewtrogicMode)
+						MusicBeatState.switchState(new StoryMenuState());
+					else
+						MusicBeatState.switchState(new NewTrogicStoryMenu()); */
+
 					MusicBeatState.switchState(new StoryMenuState());
 
 					// if ()
@@ -4544,7 +4602,11 @@ class PlayState extends MusicBeatState
 				if(FlxTransitionableState.skipNextTransIn) {
 					CustomFadeTransition.nextCamera = null;
 				}
-				MusicBeatState.switchState(new BallsFreeplay());
+				if(!isNewtrogicMode)
+					MusicBeatState.switchState(new BallsFreeplay());
+				else
+					MusicBeatState.switchState(new NewtrogicZone());
+
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
@@ -5531,6 +5593,69 @@ class PlayState extends MusicBeatState
 					}
 				}
 
+				case 'breakout-newtrogic':
+					{
+						switch(curStep)
+						{
+							case 406:
+								FlxTween.tween(camHUD, {alpha: 0}, 1.3, {ease: FlxEase.cubeInOut});
+								FlxTween.tween(FlxG.camera, {zoom: FlxG.camera.zoom + 0.25}, 4, {ease: FlxEase.cubeInOut});
+							case 441:
+								FlxTween.tween(theStatic, {alpha: 0.9}, 1.5, {ease: FlxEase.quadInOut});
+							case 450:
+								FlxFlicker.flicker(theStatic, 0.5, 0.02, false, false);
+								new FlxTimer().start(0.5, function(tmr:FlxTimer) 
+									{				
+										theStatic.visible = false;		
+										theStatic.alpha = 0;
+									});
+							case 454:
+								FlxTween.tween(camHUD, {alpha: 1}, 0.5, {ease: FlxEase.cubeInOut});
+								camHUD.zoom += 2;
+								holyFuckStopZoomin = true;
+								camZooming = true;
+							case 583:
+								camGame.setFilters([barrelDistortionFilter]);
+								camHUD.setFilters([barrelDistortionFilter]);
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 1.0, barrelDistortion2: 1.0}, 0.5, {ease: FlxEase.quadInOut});
+							case 606:
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: -1.0, barrelDistortion2: -1.0}, 0.35,
+									{ease: FlxEase.quadInOut});
+							case 610:
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 0.0, barrelDistortion2: 0.0}, 0.5,
+									{ease: FlxEase.quadInOut, onComplete: function(tw:FlxTween){
+										camGame.setFilters([]);
+										camHUD.setFilters([]);
+									}});
+							case 711:
+								holyFuckStopZoomin = false;
+								FlxTween.tween(camHUD, {alpha: 0.75}, 0.5, {ease: FlxEase.cubeInOut});
+							case 840:
+								FlxTween.tween(camHUD, {alpha: 1}, 0.5, {ease: FlxEase.cubeInOut});
+								holyFuckStopZoomin = true;
+							case 967:
+								camGame.setFilters([barrelDistortionFilter]);
+								camHUD.setFilters([barrelDistortionFilter]);
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 1.0, barrelDistortion2: 1.0}, 0.5, {ease: FlxEase.quadInOut});
+							case 1000:
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: -1.0, barrelDistortion2: -0.5}, 0.75,
+									{ease: FlxEase.quadInOut});
+							case 1004:
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 0.0, barrelDistortion2: 0.0}, 0.75, {
+									ease: FlxEase.backOut,
+									onComplete: function(tw:FlxTween)
+									{
+										camGame.setFilters([]);
+										camHUD.setFilters([]);
+									}
+								});
+							case 1895:
+								holyFuckStopZoomin = false;
+								camZooming = false;
+								FlxTween.tween(camHUD, {alpha: 0}, 3, {ease: FlxEase.cubeInOut});
+						}
+					}
+
 				case 'soulless-endeavors':
 					{
 						switch (curStep)
@@ -5601,17 +5726,24 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(camHUD, {alpha: 0}, 1.75, {ease: FlxEase.cubeInOut});
 						}
 					}
-		/*case 'final-frontier':
+		case 'final-frontier':
 			{
 				switch (curStep)
 				{
-					case 704:
-							camGame.setFilters([barrelDistortionFilter]);
-							camHUD.setFilters([barrelDistortionFilter]);
-							FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 1.0, barrelDistortion2: 1.0}, 0.5, {ease: FlxEase.quadInOut});
+					case 3904, 5185:
+						vignette.alpha = 1;
+					case 4409, 4413, 4416:
+						camGame.alpha = 0.5;
+					case 4411, 4415, 4451:
+						camGame.alpha = 1;
+					case 4672, 5952:
+						vignette.alpha = 0;
+					case 6522:
+						FlxTween.tween(camHUD, {alpha: 0}, 2.3, {ease: FlxEase.cubeInOut});
+						FlxTween.tween(camGame, {alpha: 0}, 2.3, {ease: FlxEase.cubeInOut});
 				}	
 			}
-*/
+
 		case 'my-horizon':
 			{
 				switch (curStep)
@@ -6281,20 +6413,38 @@ class PlayState extends MusicBeatState
 		}
 
 	function staticEvent()
-		{
-			FlxTween.tween(theStatic, {alpha: 0.9}, 1.5, {ease: FlxEase.quadInOut});
+	{
+		FlxTween.tween(theStatic, {alpha: 0.9}, 1.5, {ease: FlxEase.quadInOut});
 
-			new FlxTimer().start(0.9, function(tmr:FlxTimer) 
-				{				
-					FlxFlicker.flicker(theStatic, 0.5, 0.02, false, false);
-				});
-			new FlxTimer().start(1.5, function(tmr:FlxTimer) 
-				{				
-					FlxG.camera.flash(0xFF0edc7c, 1);
-					theStatic.visible = false;
-					theStatic.alpha = 0;
-				});
-		}
+		new FlxTimer().start(0.9, function(tmr:FlxTimer) 
+		{				
+			FlxFlicker.flicker(theStatic, 0.5, 0.02, false, false);
+		});
+		new FlxTimer().start(1.5, function(tmr:FlxTimer) 
+		{				
+			FlxG.camera.flash(0xFF0edc7c, 1);
+			theStatic.visible = false;
+			theStatic.alpha = 0;
+		});
+	}
+	
+	function tweencredits()
+	{
+		FlxTween.tween(creditoText, {y: FlxG.height - 625}, 0.5, {ease: FlxEase.circOut});
+		FlxTween.tween(box, {y: 0}, 0.5, {ease: FlxEase.circOut});
+		//tween away
+		new FlxTimer().start(3, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(creditoText, {y: -1000}, 0.5, {ease: FlxEase.circOut});
+				FlxTween.tween(box, {y: -1000}, 0.5, {ease: FlxEase.circOut});
+				//removal
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+					{
+						remove(creditsText);
+						remove(box);
+					});
+			});
+	}
 	
 	function makeWarning()
 	{

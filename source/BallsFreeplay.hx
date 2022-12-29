@@ -40,7 +40,7 @@ class BallsFreeplay extends MusicBeatState
         Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-        PlayState.isStoryMode = false;
+        PlayState.isNewtrogicMode = false;
 
         transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;

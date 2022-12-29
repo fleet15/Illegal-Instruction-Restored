@@ -90,8 +90,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
-			else
+			else if (!PlayState.isNewtrogicMode)
 				MusicBeatState.switchState(new FreeplayState());
+			else
+				MusicBeatState.switchState(new NewtrogicZone());
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.instance.callOnLuas('onGameOverConfirm', [false]);

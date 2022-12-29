@@ -7,6 +7,7 @@ import editors.ChartingState;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -27,121 +28,103 @@ import sys.FileSystem;
 using StringTools;
 
 class NewtrogicZone extends MusicBeatState
-{
-    var songs:Array<String> = ['breakout-encore',];
-    private var curSelected:Int = 0;
-    private var grpImages:FlxTypedGroup<MenuItemAgainFuckYou>;
-    var bg:FlxSprite;
-    var selectorSprite:MenuItemAgainFuckYou;
-    var imageName:String;
+{  
+    var songs:Array<String> = [
+        'breakout',
+        'my-horizon'
+    ];
+
+    var portraitImages:FlxTypedGroup<FlxSprite>;
+
+    var curSelected:Int = 0;
+    var selected:Bool = false;
 
     override function create()
     {
         Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-        PlayState.isStoryMode = false;
+        PlayState.isNewtrogicMode = true;
 
         transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
+        FlxG.mouse.visible = true;
+
         #if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Choosing their destiny.", null);
+		DiscordClient.changePresence("Selecting The New World.", null);
 		#end
 
-        bg = new FlxSprite(-80).loadGraphic(Paths.image('chaotixMenu/menu-newtro'));
-		bg.scrollFactor.set(0, 0);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
-        bg.alpha = 0.5;
-		bg.updateHitbox();
-		bg.screenCenter();
-		bg.antialiasing = false;
-		add(bg);
+        var screen:FlxSprite = new FlxSprite().loadGraphic(Paths.image('freeplay/encore/screen'));
+        screen.setGraphicSize(FlxG.width, FlxG.height);
+        screen.updateHitbox();
+        add(screen);
 
-        grpImages = new FlxTypedGroup<MenuItemAgainFuckYou>();
-		add(grpImages);
+        portraitImages = new FlxTypedGroup<FlxSprite>();
+        add(portraitImages);
 
-        for (i in 0...songs.length){
-            imageName = 'freeplay/' + songs[i];
-            if(songs[i] == 'perdition' || songs[i] == 'corinthians'){
-                imageName = 'freeplay/satan/${songs[i]}';
+        for(i in 0...songs.length)
+        {
+            var portrait:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/encore/' + songs[i] + '-encore'));
+            portrait.screenCenter();
+            portrait.ID = i;
+            switch(portrait.ID)
+            {
+                case 0:
+                    portrait.x -= 430;
+                    portrait.y -= 250;
+                case 1:
+                    portrait.x += 290;
+                    portrait.y -= 250;
             }
-
-            selectorSprite = new MenuItemAgainFuckYou(1300 * i, 0, imageName);
-            //selectorSprite.x += ((selectorSprite.x + 1500) * i); //eh????
-            selectorSprite.newX = i;
-            selectorSprite.screenCenter();
-            selectorSprite.updateHitbox();
-            selectorSprite.ID = i;
-            grpImages.add(selectorSprite);
+            portrait.scale.set(2, 2);
+            portraitImages.add(portrait);
+            portrait.updateHitbox();
         }
     }
+
     override function update(elapsed:Float)
     {
-        var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
-		var accepted = controls.ACCEPT;
-		var space = FlxG.keys.justPressed.SPACE;
-
-        selectorSprite.update(elapsed);
-
-        if(controls.UI_RIGHT_P)
-            changeSelection(1);
-        if(controls.UI_LEFT_P)
-            changeSelection(-1);
-        if(accepted) {
-            var songLowercase:String = Paths.formatToSongPath(songs[curSelected]);
-            FlxG.sound.play(Paths.sound('confirmMenu'));
-            PlayState.SONG = Song.loadFromJson(songLowercase + '-hard', songLowercase);
-			PlayState.isStoryMode = false;
-            // im sad this doesn't work :(((((
-            // i fixed it, whoever this was
-            grpImages.forEach(function(spr:FlxSprite)
+        if(!selected)
+        {
+            portraitImages.forEach(function(spr:FlxSprite)
             {
-                if (curSelected == spr.ID)
+                if(FlxG.mouse.overlaps(spr))
                 {
-                    FlxTween.tween(spr.scale, {x: 2, y: 2}, 1, {ease: FlxEase.cubeInOut});
-                    FlxTween.tween(spr, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
+                    spr.alpha = 1;
+                    if(FlxG.mouse.justPressed || controls.ACCEPT)
+                    {
+                        curSelected = spr.ID;
+                        selected = true;
+                        FlxG.sound.play(Paths.sound('confirmMenu'));
+                        doTheLoad();
+                    }
                 }
                 else
-                {
-                    FlxTween.tween(spr.scale, {x: 0, y: 0}, 1, {ease: FlxEase.cubeInOut});
-                    FlxTween.tween(spr, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
-                }
-            }); 
-            
-            FlxTween.tween(bg, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
-            new FlxTimer().start(1, function(tmr:FlxTimer)
-                {
-                    LoadingState.loadAndSwitchState(new PlayState());
-                });
-        }
-        if (controls.BACK)
-            {
+                    spr.alpha = 0.7;
+            });
+            if(controls.BACK) {
                 FlxG.sound.play(Paths.sound('cancelMenu'));
                 MusicBeatState.switchState(new MainMenuState());
             }
+        }
         super.update(elapsed);
     }
-    function changeSelection(change:Int){
-        curSelected += change;
 
-        if (curSelected < 0)
-			curSelected = songs.length - 1;
-		if (curSelected >= songs.length)
-			curSelected = 0;
+    override function switchTo(state:FlxState) {
+		// DO CLEAN-UP HERE!!
+		FlxG.mouse.visible = false;
 
-		var bullShit:Int = 0;
+		return super.switchTo(state);
+	}
 
-        for (item in grpImages.members)
-            {
-                item.newX = bullShit - curSelected;
-                if (item.ID == curSelected)
-                    item.alpha = 1;
-                else
-                    item.alpha = 0.5;
-                bullShit++;
-            }
+    function doTheLoad()
+    {
+        var songLowercase:String = Paths.formatToSongPath(songs[curSelected]);
+        FlxG.sound.play(Paths.sound('confirmMenu'));
+        PlayState.SONG = Song.loadFromJson(songLowercase + '-newtrogic', songLowercase);
+        PlayState.isStoryMode = false;
+        LoadingState.loadAndSwitchState(new PlayState());
     }
 }
