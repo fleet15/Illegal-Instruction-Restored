@@ -91,7 +91,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
 			else if (!PlayState.isNewtrogicMode)
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new BallsFreeplay());
 			else
 				MusicBeatState.switchState(new NewtrogicZone());
 

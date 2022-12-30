@@ -44,6 +44,9 @@ class NewtrogicZone extends MusicBeatState
         Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
+        FlxG.sound.playMusic(Paths.music('NewtrogicMenu'), 0);
+		FlxG.sound.music.fadeIn(1.4, 0, 0.7);
+
         PlayState.isNewtrogicMode = true;
 
         transIn = FlxTransitionableState.defaultTransIn;
@@ -98,7 +101,7 @@ class NewtrogicZone extends MusicBeatState
                         curSelected = spr.ID;
                         selected = true;
                         FlxG.sound.play(Paths.sound('confirmMenu'));
-                        doTheLoad();
+                        doTheTween();
                     }
                 }
                 else
@@ -113,8 +116,9 @@ class NewtrogicZone extends MusicBeatState
     }
 
     override function switchTo(state:FlxState) {
-		// DO CLEAN-UP HERE!!
 		FlxG.mouse.visible = false;
+
+        FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
 		return super.switchTo(state);
 	}
@@ -122,9 +126,27 @@ class NewtrogicZone extends MusicBeatState
     function doTheLoad()
     {
         var songLowercase:String = Paths.formatToSongPath(songs[curSelected]);
-        FlxG.sound.play(Paths.sound('confirmMenu'));
         PlayState.SONG = Song.loadFromJson(songLowercase + '-newtrogic', songLowercase);
         PlayState.isStoryMode = false;
+        PlayState.storyDifficulty = 3;
         LoadingState.loadAndSwitchState(new PlayState());
+    }
+
+    function doTheTween()
+    {
+        portraitImages.forEach(function(spr:FlxSprite)
+        {
+            if(spr.ID != curSelected)
+            {
+                FlxTween.tween(spr, {alpha: 0}, 0.3, {ease: FlxEase.sineOut});
+            }
+            if(spr.ID == curSelected)
+            {
+                FlxFlicker.flicker(spr, 1, 0.06, true, false, function(flick:FlxFlicker)
+                {
+                    doTheLoad();
+                });
+            }
+        });
     }
 }

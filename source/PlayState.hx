@@ -649,6 +649,22 @@ class PlayState extends MusicBeatState
 				entrancePointers.antialiasing = true;
 				add(entrancePointers);
 
+				camGlitchShader = new GlitchShaderB();
+				camGlitchShader.iResolution.value = [FlxG.width, FlxG.height];
+				camGlitchFilter = new ShaderFilter(camGlitchShader);
+
+				staticlol = new StaticShader();
+				staticOverlay = new ShaderFilter(staticlol);
+				staticlol.iTime.value = [0];
+				staticlol.iResolution.value = [FlxG.width, FlxG.height];
+				staticlol.alpha.value = [staticAlpha];
+				staticlol.enabled.value = [false];
+
+				camFuckShader = new Fuck();
+				camFuckFilter = new ShaderFilter(camFuckShader);
+
+				camGame.setFilters([staticOverlay, camFuckFilter]);
+
 			case 'soulless':
 				defaultCamZoom = 0.75;
 
@@ -2274,6 +2290,28 @@ class PlayState extends MusicBeatState
 							scoreRandom = false;
 							defaultCamZoom = 0.67;
 							trace("lol");
+						});
+				}
+			case 'breakout-newtrogic':
+				switch(FlxG.random.int(1,2))
+				{
+					case 1:
+						staticlol.enabled.value = [true];
+						scoreRandom = true;
+						defaultCamZoom = 0.85;
+						new FlxTimer().start(0.45, function(byebye:FlxTimer) {
+							staticlol.enabled.value = [false];
+							scoreRandom = false;
+							defaultCamZoom = 0.67;
+						});
+					case 2:
+						camFuckShader.amount = 0.15;
+						scoreRandom = true;
+						defaultCamZoom = 0.85;
+						new FlxTimer().start(0.45, function(byebye:FlxTimer) {
+							camFuckShader.amount = 0;
+							scoreRandom = false;
+							defaultCamZoom = 0.67;
 						});
 				}
 		}
@@ -5638,21 +5676,20 @@ class PlayState extends MusicBeatState
 								camHUD.setFilters([barrelDistortionFilter]);
 								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 1.0, barrelDistortion2: 1.0}, 0.5, {ease: FlxEase.quadInOut});
 							case 1000:
-								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: -1.0, barrelDistortion2: -0.5}, 0.75,
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: -1.0, barrelDistortion2: -1.0}, 0.35,
 									{ease: FlxEase.quadInOut});
-							case 1004:
-								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 0.0, barrelDistortion2: 0.0}, 0.75, {
-									ease: FlxEase.backOut,
-									onComplete: function(tw:FlxTween)
-									{
+							case 1008:
+								FlxTween.tween(barrelDistortionShader, {barrelDistortion1: 0.0, barrelDistortion2: 0.0}, 0.5,
+									{ease: FlxEase.quadInOut, onComplete: function(tw:FlxTween){
 										camGame.setFilters([]);
 										camHUD.setFilters([]);
-									}
-								});
+									}});
 							case 1895:
 								holyFuckStopZoomin = false;
 								camZooming = false;
 								FlxTween.tween(camHUD, {alpha: 0}, 3, {ease: FlxEase.cubeInOut});
+							case 408, 411, 414, 417, 420, 422, 424, 426, 429, 433, 436, 439, 442, 446, 448, 450, 745, 747, 749, 799, 800, 801, 802, 813, 814, 815:
+								glitchFreeze(); 
 						}
 					}
 

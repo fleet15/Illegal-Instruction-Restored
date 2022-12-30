@@ -95,6 +95,7 @@ class BallsFreeplay extends MusicBeatState
             FlxG.sound.play(Paths.sound('confirmMenu'));
             PlayState.SONG = Song.loadFromJson(songLowercase + '-hard', songLowercase);
 			PlayState.isStoryMode = false;
+            PlayState.storyDifficulty = 3;
             // im sad this doesn't work :(((((
             // i fixed it, whoever this was
             grpImages.forEach(function(spr:FlxSprite)
